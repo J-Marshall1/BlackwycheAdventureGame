@@ -57,5 +57,18 @@ class Dagger(Weapon):
                        value=10,
                        damage=10)
 
-@TODO
-#Add in cutlass and flintlock pistol sub classes
+class Cutlass(Weapon):
+  def __init__(self):
+    super().__init__(name="Cutlass",
+                     description="A short sword with a curved edge. It has been sharpened to a point.",
+                     value=50,
+                     damage=25)
+
+class FlintlockPistol(Weapon):
+  def __init__(self):
+    super().__init__(name="Cutlass",
+                     description="A small pistol with a smooth grip. It packs a punch!",
+                     value=75,
+                     damage=40)
+
+# @TODO need to add in item tool classes such as torch and food
