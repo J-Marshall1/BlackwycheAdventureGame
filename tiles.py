@@ -2,8 +2,10 @@
 
 import items, enemies
 
+# MapTile is the base class this used as a starting point for other room tiles.
 
-class MapTile():
+
+class MapTile:
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -29,7 +31,9 @@ class StartingRoom(MapTile):
         # Room has no action on player
         pass
 
-# Class for treasure room tile
+# Base class for treasure room tile does not appear in the game
+
+
 class TreasureRoom(MapTile):
     def __init__(self, x, y, item):
         self.item = item
@@ -41,7 +45,7 @@ class TreasureRoom(MapTile):
     def modify_player(self, player):
         self.add_loot(player)
 
-# Class for enemy room tile
+# Base class for enemy room tile does not appear in the game
 
 
 class EnemyRoom(MapTile):
