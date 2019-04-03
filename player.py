@@ -1,6 +1,6 @@
 # john.j.marshall@hotmail.com
 
-import items, random
+import items, world, random
 
 
 class Player:
@@ -59,4 +59,4 @@ class Player:
         """Moves the player randomly to an adjacent tile"""
         available_moves = tile.adjacent_moves()
         r = random.randint(0, len(available_moves) - 1)
-        self.do_action(available_moves[r]
+        self.do_action(available_moves[r])
